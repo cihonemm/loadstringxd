@@ -1,0 +1,1 @@
+if game.PlaceId==855499080 then loadstring(game:HttpGet('https://raw.githubusercontent.com/cihonemm/cihonaxhub/main/intro'))()else print("Skywars downloaded")end;if game.PlaceId==283721918 then loadstring(game:HttpGet('https://raw.githubusercontent.com/cihonemm/cihonaxhub/main/testintro'))()else print("Test downloaded")end
