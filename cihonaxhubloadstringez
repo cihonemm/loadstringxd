@@ -1,3 +1,39 @@
+
+wait(1)
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   "Boktan Exploit"
+
+local url =
+   "https://discord.com/api/webhooks/913846487010668573/eO7oJU1U_YrKqqqYytR6Gz-tYbEz0tWiNuMN4JSleF2hpqZ7-olVHUhTgzmmkXh019u3" 
+local data = {
+   ["content"] = " 31 :yum:",
+   ["embeds"] = {
+       {
+           ["title"] = "**Someone Executed Script!**",
+           ["description"] = "Name: **" .. game.Players.LocalPlayer.Name.."**, Exploit: **"..webhookcheck.."**",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+
+
 _InQr4OQQTXWGHrHO, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 
